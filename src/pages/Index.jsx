@@ -8,7 +8,7 @@ const Index = () => {
     <ChakraProvider theme={theme}>
       <Flex justifyContent="space-between" alignItems="center" px={4} py={3}>
         <Icon as={FaUserCircle} w={6} h={6} />
-        <IconButton aria-label="Toggle dark mode" icon={colorMode === "dark" ? <FaSun /> : <FaMoon />} onClick={toggleColorMode} size="lg" />
+        <IconButton aria-label="Toggle dark mode" icon={colorMode === "dark" ? <FaSun /> : <span />} onClick={toggleColorMode} size="lg" />
       </Flex>
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3}>
