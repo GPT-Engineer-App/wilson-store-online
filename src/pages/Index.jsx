@@ -1,10 +1,12 @@
 import React from "react";
-import { ChakraProvider, Box, VStack, Grid, theme, Text, Image, Heading, Input, Button, Icon, HStack, Stack, Flex, Spacer } from "@chakra-ui/react";
-import { FaSearch, FaShoppingCart, FaUserCircle } from "react-icons/fa";
+import { ChakraProvider, Box, VStack, Grid, theme, Text, Image, Heading, Input, Button, Icon, HStack, Stack, Flex, Spacer, IconButton, useColorMode } from "@chakra-ui/react";
+import { FaSearch, FaShoppingCart, FaUserCircle, FaSun, FaMoon } from "react-icons/fa";
 
 const Index = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <ChakraProvider theme={theme}>
+      <IconButton aria-label="Toggle dark mode" icon={colorMode === "dark" ? <FaSun /> : <FaMoon />} onClick={toggleColorMode} position="absolute" top="1rem" right="1rem" />
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3}>
           <VStack spacing={8}>
